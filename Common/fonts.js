@@ -18,8 +18,8 @@ var SIZE_TINY               = RHT.em(10),
     BASE_FONT_BOLD          = "OpenSansRegular",
     ICON_FONT               = "Glyphicons",
     /* Icon Sizes */
-    ICON_TINY               = RHT.em(18),
-    ICON_SMALL              = RHT.em(22),
+    ICON_TINY               = RHT.em(16),
+    ICON_SMALL              = RHT.em(20),
     ICON_NORMAL             = RHT.em(32),
     ICON_BIG                = RHT.em(48),
     ICON_HUGE               = RHT.em(64);

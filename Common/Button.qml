@@ -4,6 +4,7 @@ import "./"
 
 import "fonts.js" as Fonts
 import "palette.js" as Palette
+import "resolutionHelperTools.js" as RHT
 
 MouseArea {
     id: buttonContainer
@@ -26,24 +27,28 @@ MouseArea {
         Icon{
             id: buttonIcon
             name: buttonContainer.icon
-            anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 10
             visible: buttonContainer.icon.length
             color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.UI_ACTIVE_COLOR : Palette.UI_ACTIVE_COLOR_I
-            anchors.verticalCenterOffset: 2
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.top: parent.top
+            anchors.topMargin: 0
             size: buttonContainer.text.length ? Fonts.ICON_TINY : Fonts.ICON_SMALL
         }
         Text{
             id: buttonText
-            anchors.verticalCenter: parent.verticalCenter
+            color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.UI_ACTIVE_COLOR : Palette.UI_ACTIVE_COLOR_I
             anchors.right: parent.right
             anchors.rightMargin: 10
-            color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.UI_ACTIVE_COLOR : Palette.UI_ACTIVE_COLOR_I
             visible: buttonContainer.text.length
             size: Fonts.SIZE_WIDGET_TEXT
             text: buttonContainer.text
-            anchors.verticalCenterOffset: -1
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignVCenter
+            anchors.bottom: parent.bottom
+            anchors.top: parent.top
         }
     }
 }

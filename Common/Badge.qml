@@ -2,8 +2,9 @@ import QtQuick 2.0
 
 import "./"
 
-import "../Common/palette.js" as Palette
-import "../Common/fonts.js" as Fonts
+import "palette.js" as Palette
+import "fonts.js" as Fonts
+import "resolutionHelperTools.js" as RHT
 
 Rectangle{
     id: bage

@@ -3,6 +3,7 @@ import QtQuick 2.0
 import "../Data"
 import "../Common/palette.js" as Palette
 import "../Common/fonts.js" as Fonts
+import "../Common/resolutionHelperTools.js" as RHT
 
 Flickable{
     id: viewContainer

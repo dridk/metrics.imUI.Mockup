@@ -2,33 +2,41 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
 import "../Data"
+import "../Common"
 import "../Common/palette.js" as Palette
+import "../Common/resolutionHelperTools.js" as RHT
 
 Rectangle {
     id: sidebar
-    width: 240
+    width: RHT.em(240)
     height: 600
     color: Palette.VIEW_BACKGROUND_I
 
 
     ColumnLayout {
         id: columnMain
-        spacing: 11
-        anchors.bottomMargin: 11
-        anchors.topMargin: 11
+        spacing: RHT.em(11)
+        anchors.bottomMargin: RHT.em(11)
+        anchors.topMargin: RHT.em(11)
         anchors.fill: parent
         Image{
             anchors.horizontalCenter: parent.horizontalCenter
             source: "assets/logo_full.png"
         }
+            Button{
+                icon: "add"
+                text: "Add"
+                style: Palette.BUTTON_INVERSE
+                Layout.alignment: Qt.AlignHCenter
+            }
+
         Section{
             anchors.left: parent.left
             anchors.right: parent.right
             height: sidebar.height * 0.4
             spacing: 0
             title: "DASH VIEWS"
-            showAdd: true
-            sectionItem: ViewItem{
+            sectionItem: ViewItem {
                 text: textm
                      updates:  updatesm
                      selected: selectedm

@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 import "fonts.js" as Fonts
 import "palette.js" as Palette
+import "resolutionHelperTools.js" as RHT
 
 Item{
     id: iconContainer

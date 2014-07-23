@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.1
 import "../Common"
 import "../Common/palette.js" as Palette
 import "../Common/fonts.js" as Fonts
+import "../Common/resolutionHelperTools.js" as RHT
 
 Rectangle {
     id: chartContainer

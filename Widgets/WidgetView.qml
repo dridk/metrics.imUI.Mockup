@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import "../Common/resolutionHelperTools.js" as RHT
 
 Item {
     id: toolbarContainer

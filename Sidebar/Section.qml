@@ -3,14 +3,12 @@ import QtQuick.Layouts 1.1
 
 import "../Common"
 import "../Common/palette.js" as Palette
+import "../Common/resolutionHelperTools.js" as RHT
 
 ColumnLayout {
     id: section
     width: 240
-    height: 400
-
-    property alias showAdd: addButton.visible
-    signal add
+    height: 200
 
     property alias title: sectionTitle.text
     property alias sectionItem: listView.delegate
@@ -21,13 +19,6 @@ ColumnLayout {
         text: "Dash Views"
         anchors.left: parent.left
         anchors.right: parent.right
-        Button{
-            id: addButton
-            icon: "add"
-            style: Palette.BUTTON_INVERSE
-            visible: false
-            onClicked: section.add()
-        }
     }
 
     ListView {
