@@ -12,10 +12,10 @@ Item {
     FontLoader {
         name: "OpenSansBold"
         source: "./resources/OpenSans-Semibold.ttf"
-    }
+    }    
     FontLoader {
-        name: "Fontawesome"
-        source: "./resources/fontawesome-webfont.ttf"
+        name: "Glyphicons"
+        source: "./resources/glyphicons-regular.ttf"
     }
 }
 

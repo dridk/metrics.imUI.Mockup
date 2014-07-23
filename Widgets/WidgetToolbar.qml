@@ -24,19 +24,23 @@ Column {
             icon: "add"
             text: "Widget"
         }
+        VerticalSeparator{}
         Button{
             icon: "search"
         }
-        Item{
+        Item{ //Spacer
             Layout.fillWidth: true
         }
         Text{
             text: "Logged in as:"
+            size: Fonts.SIZE_SMALL
+            color: Palette.TEXT_FADED_COLOR
         }
         Text{
             id: userView
-            color: "#118ab1"
+            color: Palette.LINK_COLOR
             text: "Eugene Trounev"
+            size: Fonts.SIZE_SMALL
         }
 }
     RowLayout{
@@ -49,6 +53,24 @@ Column {
             text: "Created on April 3, 2014 / Or any other description"
             size: Fonts.SIZE_PAGE_DESCRIPTION
             color: Palette.TEXT_FADED_COLOR
+        }
+        Item{ //Spacer
+            Layout.fillWidth: true
+        }
+        Button{
+            icon: "projector"
+        }
+        Button{
+            icon: "print"
+        }
+        VerticalSeparator{}
+        Button{
+            icon: "share_alt"
+            text: "3"
+        }
+        Button{
+            icon: "conversation"
+            text: "24 +5"
         }
     }
 }

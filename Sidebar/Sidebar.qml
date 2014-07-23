@@ -1,13 +1,14 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
+import "../Data"
 import "../Common/palette.js" as Palette
 
 Rectangle {
     id: sidebar
     width: 240
     height: 600
-    color: "#2a4050"
+    color: Palette.VIEW_BACKGROUND_I
 
 
     ColumnLayout {
@@ -30,33 +31,7 @@ Rectangle {
                      updates:  updatesm
                      selected: selectedm
             }
-            sectionModel: ListModel{
-                ListElement{
-                    textm: "Personal"
-                    updatesm: 23
-                    selectedm: true
-                }
-                ListElement{
-                    textm: "Work"
-                    updatesm: 12
-                    selectedm: false
-                }
-                ListElement{
-                    textm: "Play"
-                    updatesm: 8
-                    selectedm: false
-                }
-                ListElement{
-                    textm: "Eat"
-                    updatesm: 14
-                    selectedm: false
-                }
-                ListElement{
-                    textm: "Sleep"
-                    updatesm: 25
-                    selectedm: false
-                }
-            }
+            sectionModel: DashboardModel{}
         }
         Rectangle{
             height: 10
@@ -72,44 +47,7 @@ Rectangle {
                 header: headerm
                 text: textm
             }
-            sectionModel: ListModel{
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-                ListElement{
-                    headerm: "<b>Sasha S.</b>@perfomanc..."
-                    textm: "Does anyone know what's going on there?"
-                }
-            }
+            sectionModel: NewsFeedModel{}
         }
 
     }

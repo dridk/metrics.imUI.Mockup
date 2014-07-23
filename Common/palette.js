@@ -15,6 +15,7 @@ var LIGHT = "#ffffff",
     TEXT_FADED_COLOR = "#777777",
     UI_ACTIVE_COLOR = DARK_BACKGROUND,
     UI_INACTIVE_COLOR = "#9db6cb",
+    UI_BORDER_COLOR = "#e2e2e8",
     /* DARK SIDE [Luke, I am your father!] */
     VIEW_BACKGROUND_I = DARK_BACKGROUND,
     WIDGET_BACKGROUND_I = "#3b546a",
@@ -22,6 +23,7 @@ var LIGHT = "#ffffff",
     TEXT_FADED_COLOR_I = "#128eb2",
     UI_ACTIVE_COLOR_I = "#ffffff",
     UI_INACTIVE_COLOR_I = "#3b546a",
+    UI_BORDER_COLOR_I = "#3b546a",
     /*Button styles*/
     BUTTON_NORMAL = 1,
     BUTTON_INVERSE = 2;

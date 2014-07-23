@@ -14,7 +14,7 @@ Item{
 
     Text{
         id: icon
-        text: "\uE002"//Fonts.getIcon(parent.name)
+        text: Fonts.getIcon(parent.name)
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
