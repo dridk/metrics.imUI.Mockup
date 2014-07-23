@@ -31,32 +31,6 @@ Column {
         Item{ //Spacer
             Layout.fillWidth: true
         }
-        Text{
-            text: "Logged in as:"
-            size: Fonts.SIZE_SMALL
-            color: Palette.TEXT_FADED_COLOR
-        }
-        Text{
-            id: userView
-            color: Palette.LINK_COLOR
-            text: "Eugene Trounev"
-            size: Fonts.SIZE_SMALL
-        }
-}
-    RowLayout{
-        anchors.left: parent.left
-        anchors.right: parent.right
-        height: 24
-
-        Text{
-            id: viewSubTitle
-            text: "Created on April 3, 2014 / Or any other description"
-            size: Fonts.SIZE_PAGE_DESCRIPTION
-            color: Palette.TEXT_FADED_COLOR
-        }
-        Item{ //Spacer
-            Layout.fillWidth: true
-        }
         Button{
             icon: "projector"
         }
@@ -72,5 +46,37 @@ Column {
             icon: "conversation"
             text: "24 +5"
         }
+
+        Avatar{
+          width: 40
+        }
+
+//        Text{
+//            text: "Logged in as:"
+//            size: Fonts.SIZE_SMALL
+//            color: Palette.TEXT_FADED_COLOR
+//        }
+//        Text{
+//            id: userView
+//            color: Palette.LINK_COLOR
+//            text: "Eugene Trounev"
+//            size: Fonts.SIZE_SMALL
+//        }
+}
+    RowLayout{
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 24
+
+        Text{
+            id: viewSubTitle
+            text: "Created on April 3, 2014 / Or any other description"
+            size: Fonts.SIZE_PAGE_DESCRIPTION
+            color: Palette.TEXT_FADED_COLOR
+        }
+        Item{ //Spacer
+            Layout.fillWidth: true
+        }
+
     }
 }

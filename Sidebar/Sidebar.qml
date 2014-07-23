@@ -25,7 +25,9 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             height: sidebar.height * 0.4
+            spacing: 0
             title: "DASH VIEWS"
+            showAdd: true
             sectionItem: ViewItem{
                 text: textm
                      updates:  updatesm
@@ -33,12 +35,12 @@ Rectangle {
             }
             sectionModel: DashboardModel{}
         }
-        Rectangle{
-            height: 10
-            anchors.left: parent.left
-            anchors.right: parent.right
-            color: Palette.WIDGET_BACKGROUND_I
-        }
+//        Rectangle{
+//            height: 10
+//            anchors.left: parent.left
+//            anchors.right: parent.right
+//            color: Palette.WIDGET_BACKGROUND_I
+//        }
 
         Section{
             Layout.fillHeight: true

@@ -13,7 +13,7 @@ Rectangle{
 
 
     width: bageText.paintedWidth+15
-    height: bageText.paintedHeight
+    height: bageText.paintedHeight+5
     radius: height/2
 
     color: bage.inverse ? Palette.TEXT_DEFAULT_COLOR_I : Palette.TEXT_DEFAULT_COLOR

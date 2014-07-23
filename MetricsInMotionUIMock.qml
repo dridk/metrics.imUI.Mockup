@@ -11,6 +11,8 @@ import "Widgets"
 
 import "Common/palette.js" as Palette
 
+import "Common/resolutionHelperTools.js" as RHT
+
 Window {
     id: window
     width: 1300
@@ -18,16 +20,31 @@ Window {
     minimumWidth: 600
     minimumHeight: 400
 
+    property variant definition: {
+        "intendedResolution": {
+            "width": 1600,
+            "height": 900
+        },
+        "currentResolution": {
+            "width": Screen.width,
+            "height": Screen.height
+        }
+    }
+
+    Component.onCompleted: {
+        RHT.init(window)
+    }
+
     title: "metrics.im MOCKUP"
 
-    Fonts{} //Load custom and icon fonts
+    Fonts {
+    } //Load custom and icon fonts
 
-    Toolbar{
+    Toolbar {
         id: toolbar
         anchors.right: parent.right
         anchors.left: parent.left
         anchors.top: parent.top
-
     }
     Rectangle {
         id: view
@@ -37,22 +54,18 @@ Window {
         anchors.bottom: parent.bottom
         color: Palette.VIEW_BACKGROUND
 
-        RowLayout{
+        RowLayout {
             spacing: 0
             anchors.fill: parent
-            Sidebar{
+            Sidebar {
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
             }
-            WidgetView{
+            WidgetView {
                 Layout.fillWidth: true
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
-
             }
-
         }
     }
-
 }
-
