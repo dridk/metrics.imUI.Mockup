@@ -20,6 +20,8 @@ Column {
         }
         Button{
             icon: "edit"
+            scale: containsMouse ? 1 : 0.8
+            opacity: containsMouse ? 1 : 0.5
         }
         Button{
             icon: "add"

@@ -46,15 +46,17 @@ Rectangle {
             Icon{
                 name: "conversation"
                 size: Fonts.ICON_TINY
+                color: Palette.UI_INACTIVE_COLOR
             }
             Text{
                 id: chartConversations
                 text: chartContainer.conversations + ""
                 size: Fonts.SIZE_CHART_DESCRIPTION
+                color: Palette.UI_INACTIVE_COLOR
             }
             Text{
                 id: chartUpdates
-                color: "#f54900"
+                color: Palette.UPDATE_COLOR
                 text: "+" + chartContainer.updates
                 size: Fonts.SIZE_CHART_DESCRIPTION
                 visible: chartContainer.updates
@@ -77,8 +79,8 @@ Rectangle {
     Button{
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        icon: "cogwheel"
-        style: Palette.BUTTON_PLAIN
-        scale: 0.6
+        icon: "edit"
+        scale: containsMouse ? 1 : 0.8
+        opacity: containsMouse ? 1 : 0.5
     }
 }
