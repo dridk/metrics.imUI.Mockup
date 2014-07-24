@@ -10,6 +10,7 @@ MouseArea {
     id: buttonContainer
     width: iconBackground.width < 40 ? 40 : iconBackground.width
     height: 40
+    hoverEnabled: true
 
     property string icon: ""
     property string text: ""
@@ -20,7 +21,7 @@ MouseArea {
 
         scale: buttonContainer.pressed ? 0.9 : 1
 
-        color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.VIEW_BACKGROUND : Palette.VIEW_BACKGROUND_I
+        color: Qt.lighter(Palette.BUTTON_STYLES[buttonContainer.style].BACKGROUND, buttonContainer.containsMouse ? 1.2 : 1)
         width: 10 + buttonIcon.width + (5 * (buttonText.visible&&buttonIcon.visible? 1 : 0)) + buttonText.paintedWidth + 10
         height: 40
 
@@ -30,7 +31,7 @@ MouseArea {
             anchors.left: parent.left
             anchors.leftMargin: 10
             visible: buttonContainer.icon.length
-            color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.UI_ACTIVE_COLOR : Palette.UI_ACTIVE_COLOR_I
+            color: Palette.BUTTON_STYLES[buttonContainer.style].TEXT
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
             anchors.top: parent.top
@@ -39,7 +40,7 @@ MouseArea {
         }
         Text{
             id: buttonText
-            color: buttonContainer.style === Palette.BUTTON_NORMAL ? Palette.UI_ACTIVE_COLOR : Palette.UI_ACTIVE_COLOR_I
+            color: Palette.BUTTON_STYLES[buttonContainer.style].TEXT
             anchors.right: parent.right
             anchors.rightMargin: 10
             visible: buttonContainer.text.length

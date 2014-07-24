@@ -25,5 +25,30 @@ var LIGHT = "#ffffff",
     UI_INACTIVE_COLOR_I = "#3b546a",
     UI_BORDER_COLOR_I = "#3b546a",
     /*Button styles*/
-    BUTTON_NORMAL = 1,
-    BUTTON_INVERSE = 2;
+        BUTTON_NORMAL = 0,
+        BUTTON_INVERSE = 1,
+        BUTTON_PRIMARY = 2,
+        BUTTON_SECONDARY = 3,
+        BUTTON_PLAIN = 4,
+    BUTTON_STYLES = [{
+         //BUTTON_NORMAL
+                         "BACKGROUND": VIEW_BACKGROUND,
+                         "TEXT": UI_ACTIVE_COLOR
+        },{
+         //BUTTON_INVERSE
+                         "BACKGROUND": VIEW_BACKGROUND_I,
+                         "TEXT": UI_ACTIVE_COLOR_I
+        },{
+         //BUTTON_PRIMARY
+                         "BACKGROUND": UPDATE_COLOR,
+                         "TEXT": UI_ACTIVE_COLOR_I
+        },{
+         //BUTTON_SECONDARY
+                         "BACKGROUND": SELECTION_COLOR,
+                         "TEXT": UI_ACTIVE_COLOR_I
+        },{
+         //BUTTON_PLAIN
+                         "BACKGROUND": "transparent",
+                         "TEXT": TEXT_FADED_COLOR
+        }];
+

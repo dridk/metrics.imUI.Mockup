@@ -4,7 +4,6 @@ import QtQuick.Layouts 1.1
 import "../Common"
 import "../Common/palette.js" as Palette
 import "../Common/fonts.js" as Fonts
-import "../Common/resolutionHelperTools.js" as RHT
 
 Rectangle {
     id: chartContainer
@@ -25,11 +24,11 @@ Rectangle {
 
     Column{
         id: wrapper
-        spacing: 4
+        spacing: 2
         anchors.rightMargin: 20
         anchors.leftMargin: 20
         anchors.bottomMargin: 20
-        anchors.topMargin: 20
+        anchors.topMargin: 15
         anchors.fill: parent
         RowLayout{
             height: 21
@@ -63,8 +62,10 @@ Rectangle {
         }
         Text{
             id: chartDescription
+            height: 25
             text: "Comparative of two years 2013-2014"
             size: Fonts.SIZE_CHART_DESCRIPTION
+            color: Palette.TEXT_FADED_COLOR
         }
         Image{
             id: chartSRC
@@ -73,4 +74,11 @@ Rectangle {
         }
     }
 
+    Button{
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        icon: "cogwheel"
+        style: Palette.BUTTON_PLAIN
+        scale: 0.6
+    }
 }

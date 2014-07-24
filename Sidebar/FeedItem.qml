@@ -4,17 +4,16 @@ import QtQuick.Layouts 1.1
 import "../Common"
 import "../Common/palette.js" as Palette
 import "../Common/fonts.js" as Fonts
-import "../Common/resolutionHelperTools.js" as RHT
 
 SectionItem{
     id: viewItem
-    height: RHT.em(60)
+    height: 60
 
     property alias header: itemHeader.text
     property alias text: itemText.text
 
     Avatar{
-      width: RHT.em(40)
+      width: 40
     }
     Column{
         Layout.fillWidth: true

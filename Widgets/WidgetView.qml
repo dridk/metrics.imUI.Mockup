@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "../Common/resolutionHelperTools.js" as RHT
+import "../Common"
 
 Item {
     id: toolbarContainer
@@ -25,10 +25,19 @@ Item {
             id: chartview
             anchors.right: parent.right
             anchors.left: parent.left
-            anchors.topMargin: 30
+            anchors.topMargin: 10
             anchors.bottom: parent.bottom
             anchors.top: toolbar.bottom
 
         }
+    }
+
+    Scrollbar{
+        anchors.top: parent.top
+        anchors.topMargin: 0
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+
+        flickable: chartview
     }
 }

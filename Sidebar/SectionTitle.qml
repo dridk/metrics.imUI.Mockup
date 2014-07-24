@@ -4,7 +4,6 @@ import QtQuick.Layouts 1.1
 import "../Common"
 import "../Common/fonts.js" as Fonts
 import "../Common/palette.js" as Palette
-import "../Common/resolutionHelperTools.js" as RHT
 
 SectionItem {
     property alias text: titleText.text

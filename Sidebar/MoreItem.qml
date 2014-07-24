@@ -6,7 +6,7 @@ import "../Common/fonts.js" as Fonts
 import "../Common/resolutionHelperTools.js" as RHT
 
 SectionItem {
-    height: RHT.em(20)
+    height: 20
     Icon{
         name: "more"
         size: Fonts.ICON_TINY

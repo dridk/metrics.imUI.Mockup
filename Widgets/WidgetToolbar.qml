@@ -8,7 +8,7 @@ import "../Common/resolutionHelperTools.js" as RHT
 
 Column {
     width: 800
-    height: 68
+    height: 44
     RowLayout{
         anchors.left: parent.left
         anchors.right: parent.right
@@ -64,20 +64,4 @@ Column {
 //            size: Fonts.SIZE_SMALL
 //        }
 }
-    RowLayout{
-        anchors.left: parent.left
-        anchors.right: parent.right
-        height: 24
-
-        Text{
-            id: viewSubTitle
-            text: "Created on April 3, 2014 / Or any other description"
-            size: Fonts.SIZE_PAGE_DESCRIPTION
-            color: Palette.TEXT_FADED_COLOR
-        }
-        Item{ //Spacer
-            Layout.fillWidth: true
-        }
-
-    }
 }

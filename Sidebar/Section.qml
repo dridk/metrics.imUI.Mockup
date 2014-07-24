@@ -5,10 +5,10 @@ import "../Common"
 import "../Common/palette.js" as Palette
 import "../Common/resolutionHelperTools.js" as RHT
 
-ColumnLayout {
+Item {
     id: section
     width: 240
-    height: 200
+    height: (parent.height / 2) || 200
 
     property alias title: sectionTitle.text
     property alias sectionItem: listView.delegate
@@ -17,23 +17,44 @@ ColumnLayout {
     SectionTitle{
         id: sectionTitle
         text: "Dash Views"
+        anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
     }
 
     ListView {
         id: listView
+        anchors.top: sectionTitle.bottom
+        anchors.right: parent.right
+        anchors.bottom: moreItem.top
+        anchors.left: parent.left
         boundsBehavior: Flickable.StopAtBounds
         flickableDirection: Flickable.VerticalFlick
-        anchors.left: parent.left
-        anchors.right: parent.right
-        Layout.fillHeight: true
         clip: true
     }
 
     MoreItem{
+        id: moreItem
         visible: listView.contentHeight > listView.height
         anchors.left: parent.left
         anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        onClick: section.state === "MORE" ? section.state = "" : section.state = "MORE"
     }
+    states: [
+        State {
+            name: "MORE"
+
+            PropertyChanges {
+                target: section
+                height: sectionTitle.height + listView.contentHeight
+            }
+        }
+    ]
+//    Scrollbar {
+//        anchors.bottom: parent.bottom
+//        anchors.top: parent.top
+//        anchors.right: parent.right
+//        flickable: listView
+//    }
 }

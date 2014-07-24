@@ -2,11 +2,10 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
 import "../Common/palette.js" as Palette
-import "../Common/resolutionHelperTools.js" as RHT
 
 Rectangle {
     width: 240
-    height: RHT.em(40)
+    height: 40
     color: selected ? Palette.SELECTION_COLOR : Qt.lighter(Palette.VIEW_BACKGROUND_I, hover ? 1.2 : 1)
 
     property bool selected: false
@@ -19,8 +18,8 @@ Rectangle {
 
     RowLayout{
         id: rowLayout
-        anchors.rightMargin: RHT.em(25)
-        anchors.leftMargin: RHT.em(25)
+        anchors.rightMargin: 25
+        anchors.leftMargin: 25
         anchors.fill: parent
 
     }
