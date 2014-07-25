@@ -14,7 +14,7 @@ MouseArea {
 
     property string icon: ""
     property string text: ""
-    property int style: Palette.BUTTON_NORMAL
+    property int style: Palette.BUTTON_DEFAULT
 
     Rectangle {
         id: iconBackground

@@ -25,7 +25,7 @@ var LIGHT = "#ffffff",
     UI_INACTIVE_COLOR_I = "#3b546a",
     UI_BORDER_COLOR_I = "#3b546a",
     /*Button styles*/
-        BUTTON_NORMAL = 0,
+        BUTTON_DEFAULT = 0,
         BUTTON_INVERSE = 1,
         BUTTON_PRIMARY = 2,
         BUTTON_SECONDARY = 3,

@@ -22,13 +22,9 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
             source: "assets/logo_full.png"
         }
-        Button{
-            icon: "add"
-            style: Palette.BUTTON_PRIMARY
-            Layout.alignment: Qt.AlignHCenter
-        }
 
         Section{
+            id: sectionViews
             anchors.left: parent.left
             anchors.right: parent.right
             title: "DASH VIEWS"
@@ -38,17 +34,48 @@ Rectangle {
                      selected: selectedm
             }
             sectionModel: DashboardModel{}
+            Layout.fillHeight: true
+
+            onMoreClick: sidebar.state = sidebar.state === "MOREA" ? "" : "MOREA"
+
+//            Button{
+//                anchors.bottom: parent.bottom
+//                anchors.right: parent.right
+//                icon: "add"
+//                style: Palette.BUTTON_PRIMARY
+//                Layout.alignment: Qt.AlignHCenter
+//            }
         }
 
         Section{
-            Layout.fillHeight: true
+            id: sectionFeed
             title: "Recent Activity"
             sectionItem: FeedItem{
                 header: headerm
                 text: textm
             }
             sectionModel: NewsFeedModel{}
+            Layout.fillHeight: true
+            onMoreClick: sidebar.state = sidebar.state === "MOREB" ? "" : "MOREB"
         }
 
     }
+    states: [
+        State {
+            name: "MOREA"
+
+            PropertyChanges {
+                target: sectionFeed
+                height: 60
+            }
+        },
+        State {
+            name: "MOREB"
+
+            PropertyChanges {
+                target: sectionViews
+                height: 60
+            }
+        }
+    ]
 }

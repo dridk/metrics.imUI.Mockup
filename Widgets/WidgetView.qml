@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import "../Common"
+import "../Common/palette.js" as Palette
 
 Item {
     id: toolbarContainer
@@ -30,6 +31,14 @@ Item {
             anchors.top: toolbar.bottom
 
         }
+    }
+    Button{
+        anchors.bottomMargin: 20
+        anchors.rightMargin: 40
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        icon: "add"
+        style: Palette.BUTTON_SECONDARY
     }
 
     Scrollbar{

@@ -39,6 +39,7 @@ Rectangle {
                 id: chartTitle
                 text: "Perfomance Data"
                 size: Fonts.SIZE_CHART_TITLE
+                color: titleSensor.containsMouse ? Palette.LINK_COLOR : Palette.UI_ACTIVE_COLOR
             }
             Item{ //Spacer
                 Layout.fillWidth: true
@@ -46,13 +47,13 @@ Rectangle {
             Icon{
                 name: "conversation"
                 size: Fonts.ICON_TINY
-                color: Palette.UI_INACTIVE_COLOR
+                color: titleSensor.containsMouse ? Palette.UI_ACTIVE_COLOR : Palette.UI_INACTIVE_COLOR
             }
             Text{
                 id: chartConversations
                 text: chartContainer.conversations + ""
                 size: Fonts.SIZE_CHART_DESCRIPTION
-                color: Palette.UI_INACTIVE_COLOR
+                color: titleSensor.containsMouse ? Palette.UI_ACTIVE_COLOR : Palette.UI_INACTIVE_COLOR
             }
             Text{
                 id: chartUpdates
@@ -60,6 +61,11 @@ Rectangle {
                 text: "+" + chartContainer.updates
                 size: Fonts.SIZE_CHART_DESCRIPTION
                 visible: chartContainer.updates
+            }
+            MouseArea{
+                id: titleSensor
+                anchors.fill: parent
+                hoverEnabled: true
             }
         }
         Text{

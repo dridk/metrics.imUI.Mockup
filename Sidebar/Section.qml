@@ -14,6 +14,8 @@ Item {
     property alias sectionItem: listView.delegate
     property alias sectionModel: listView.model
 
+    signal moreClick
+
     SectionTitle{
         id: sectionTitle
         text: "Dash Views"
@@ -39,18 +41,8 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        onClick: section.state === "MORE" ? section.state = "" : section.state = "MORE"
+        onClick: moreClick()
     }
-    states: [
-        State {
-            name: "MORE"
-
-            PropertyChanges {
-                target: section
-                height: sectionTitle.height + listView.contentHeight
-            }
-        }
-    ]
 //    Scrollbar {
 //        anchors.bottom: parent.bottom
 //        anchors.top: parent.top
