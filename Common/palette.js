@@ -24,6 +24,9 @@ var LIGHT = "#ffffff",
     UI_ACTIVE_COLOR_I = "#ffffff",
     UI_INACTIVE_COLOR_I = "#3b546a",
     UI_BORDER_COLOR_I = "#3b546a",
+    /* OVERLAYS AND DIALOGUES */
+    OVERLAY_BACKGROUND = Qt.rgba(),
+    DIALOGUE_BACKGROUND = VIEW_BACKGROUND,
     /*Button styles*/
         BUTTON_DEFAULT = 0,
         BUTTON_INVERSE = 1,
