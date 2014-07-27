@@ -11,8 +11,6 @@ import "Widgets"
 
 import "Common/palette.js" as Palette
 
-import "Common/resolutionHelperTools.js" as RHT
-
 Window {
     id: window
     width: 1300
@@ -67,5 +65,10 @@ Window {
                 anchors.bottom: parent.bottom
             }
         }
+
+//        OverlayContainer{
+//            anchors.fill: parent
+//        }
     }
+
 }

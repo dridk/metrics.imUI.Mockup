@@ -88,5 +88,6 @@ Rectangle {
         icon: "edit"
         scale: containsMouse ? 1 : 0.8
         opacity: containsMouse ? 1 : 0.5
+        style: Palette.BUTTON_PLAIN
     }
 }

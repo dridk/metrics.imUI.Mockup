@@ -1,13 +1,20 @@
 import QtQuick 2.0
 import "palette.js" as Palette
 
-Rectangle {
+MouseArea {
+    id: container
     width: 1000
     height: 600
+    hoverEnabled: true
+    propagateComposedEvents: false
 
-    color: Palette.OVERLAY_BACKGROUND
+    default property alias _contentChildren: overlay.data
 
     Rectangle{
+        id: overlay
+        anchors.fill: parent
+        color: Palette.OVERLAY_BACKGROUND
+        //Children go here
 
     }
 }

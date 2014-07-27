@@ -47,7 +47,7 @@ Flickable {
         Item {
             //Spacer
             width: parent.width
-            height: 20
+            height: 100
         }
     }
 
