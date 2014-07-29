@@ -20,7 +20,7 @@ Rectangle {
         anchors.fill: parent
         Image{
             anchors.horizontalCenter: parent.horizontalCenter
-            source: "assets/logo_full.png"
+            source: sidebar.state == "" ? "assets/logo_full.png" : "assets/logo_min.png"
         }
 
         Section{
@@ -36,7 +36,7 @@ Rectangle {
             sectionModel: DashboardModel{}
             Layout.fillHeight: true
 
-            onMoreClick: sidebar.state = sidebar.state === "MOREA" ? "" : "MOREA"
+//            onMoreClick: sidebar.state = sidebar.state === "MOREA" ? "" : "MOREA"
 
 //            Button{
 //                anchors.bottom: parent.bottom
@@ -56,25 +56,24 @@ Rectangle {
             }
             sectionModel: NewsFeedModel{}
             Layout.fillHeight: true
-            onMoreClick: sidebar.state = sidebar.state === "MOREB" ? "" : "MOREB"
+//            onMoreClick: sidebar.state = sidebar.state === "MOREB" ? "" : "MOREB"
         }
 
     }
     states: [
         State {
-            name: "MOREA"
+            name: "MED"
 
             PropertyChanges {
-                target: sectionFeed
-                height: 60
+                target: sidebar
+                width: 180
             }
         },
         State {
-            name: "MOREB"
-
+            name: "MIN"
             PropertyChanges {
-                target: sectionViews
-                height: 60
+                target: sidebar
+                width: 80
             }
         }
     ]
