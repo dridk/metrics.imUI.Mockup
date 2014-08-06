@@ -11,7 +11,7 @@ Rectangle{
 
     width: 800
     height: 800
-    color: Palette.VIEW_BACKGROUND_I
+    color: "#2a4050"
 
     ColumnLayout{
         anchors.fill: parent
@@ -103,4 +103,5 @@ Rectangle{
         style: Palette.BUTTON_INVERSE
     }
 
+}
 }
